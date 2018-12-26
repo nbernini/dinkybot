@@ -1,0 +1,4 @@
+pyserial
+adafruit_motor_hat
+numpy
+picamera

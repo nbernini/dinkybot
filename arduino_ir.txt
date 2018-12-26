@@ -1,0 +1,51 @@
+
+#include config.h
+
+// Initialize pins (values from config.h)
+int ir1Pin = IR1PIN; 
+int ir2Pin = IR2PIN;
+int ir3Pin = IR3PIN; 
+int ir4Pin = IR4PIN; 
+int ir5Pin = IR5PIN; 
+
+// Initialize sensor values
+int ir1Val = 0; 
+int ir2Val = 0; 
+int ir3Val = 0; 
+int ir4Val = 0; 
+int ir5Val = 0; 
+
+// Initialize Serial information
+int baudrate = BAUDRATE
+
+void setup() {
+    // Declare pins as input
+    pinMode(ir1Pin, INPUT); 
+    pinMode(ir2Pin, INPUT); 
+    pinMode(ir3Pin, INPUT); 
+    pinMode(ir4Pin, INPUT); 
+    pinMode(ir5Pin, INPUT); 
+    
+    // Set serial baudrate.  Must match that in python
+    Serial.begin(baudrate); 
+    
+} 
+
+void loop() { 
+    // Get sensor readings
+    ir1Val = analogRead(ir1Pin); 
+    ir2Val = analogRead(ir2Pin); 
+    ir3Val = analogRead(ir3Pin); 
+    ir4Val = analogRead(ir4Pin); 
+    ir5Val = analogRead(ir5Pin); 
+    
+    // Output to Serial
+    Serial.print(ir1Val); Serial.print(",");
+    Serial.print(ir2Val); Serial.print(","); 
+    Serial.print(ir3Val); Serial.print(","); 
+    Serial.print(ir4Val); Serial.print(","); 
+    Serial.println(ir5Val); 
+    
+    // Wait 100ms before looping
+    delay(100); 
+}
