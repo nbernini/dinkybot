@@ -149,7 +149,7 @@ class Robot(object):
 class DriveTrain(object):
     """ Object for controlling drive train """
     def __init__(self):
-        # self.motHAT = amhat(addr=config.motorHATaddress) 
+        self.motHAT = amhat(addr=config.motorHATaddress) 
         self.motors = {
             'left': {
                 'motors': [self.motHAT.getMotors(i) for i in config.motorsLeft], # get motors from config file positions

@@ -1,0 +1,11 @@
+
+# Adafruit MotorHat
+git clone https://github.com/adafruit/Adafruit-Motor-HAT-Python-Library.git 
+cd Adafruit-Motor-HAT-Python-Library
+sudo apt-get install python-dev
+sudo python setup.py install
+
+
+# Wiimote
+sudo apt-get install --no-install-recommends bluetooth -y
+sudo apt-get install python-cwiid
